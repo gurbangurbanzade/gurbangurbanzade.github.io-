@@ -2,16 +2,16 @@
 
 .hero-section {
   background: rgb(30, 24, 46);
-  background: linear-gradient(90deg,
-      rgba(30, 24, 46, 1) 42%,
-      rgba(23, 30, 55, 1) 77%);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 24, 46, 1) 42%,
+    rgba(23, 30, 55, 1) 77%
+  );
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-
-
 
   .socials {
     z-index: 1;
@@ -39,8 +39,8 @@
       height: 100%;
       border-radius: 50%;
       background: #ff3870;
-      transition: .5s;
-      transform: scale(.9);
+      transition: 0.5s;
+      transform: scale(0.9);
       z-index: -1;
     }
 
@@ -52,13 +52,12 @@
     li:hover {
       color: #ff3870;
       box-shadow: 0 0 15px #ff3870;
-
     }
 
     svg {
       height: 30px;
       width: 30px;
-      transition: .5s linear;
+      transition: 0.5s linear;
     }
 
     li svg path {
@@ -73,18 +72,83 @@
     //   box-shadow: 0 0 5px #ff3870;
     //   text-shadow: 0 0 5px #ff3870;
     // }
-
-
-
-
-
   }
 
-
   .content {
-    text-align: center;
+    // text-align: center;
+    display: flex;
+    align-items: center;
     // min-width: 600px;
+    .imgBox {
+      // height: 300px;
+      position: relative;
+      img {
+        height: 400px;
+        opacity: 0.5;
+      }
+      .profile1 {
+        height: 400px;
+        position: absolute;
+        left: 200px;
+        height: 400px;
+        top: 20px;
+        opacity: 1;
+        animation: bounceInUp; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 1s; /* don't forget to set a duration! */
+        z-index: 2;
+        --animate-delay: 2s;
+      }
 
+      .arrow1 {
+        position: absolute;
+        left: 100px;
+        height: 130px;
+        top: 150px;
+        opacity: 1;
+        animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 1s; /* don't forget to set a duration! */
+        z-index: 1;
+      }
+      .arrow2 {
+        position: absolute;
+        left: 100px;
+        height: 130px;
+        top: 273px;
+        opacity: 1;
+        animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 1s;
+        z-index: 3;
+      }
+      .arrow3 {
+        position: absolute;
+        left: 370px;
+        height: 130px;
+        top: 229px;
+        opacity: 1;
+        animation: backInRight; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 1s; /* don't forget to set a duration! */
+        z-index: 1;
+      }
+      .arrow4 {
+        position: absolute;
+        left: 370px;
+        height: 130px;
+        top: 353px;
+        opacity: 1;
+        animation: backInRight; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 1s;
+        z-index: 3;
+      }
+      .slash {
+        position: absolute;
+        left: 270px;
+        height: 450px;
+        opacity: 1;
+        animation: bounceInDown; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 1s;
+        z-index: 1;
+      }
+    }
     h1 {
       padding: 0 30px;
       color: #5df8f5;
@@ -223,7 +287,6 @@ body {
 }
 
 @keyframes tail-fade {
-
   0%,
   50% {
     width: var(--star-tail-length);
@@ -335,7 +398,6 @@ body {
   }
 
   #projects {
-
     p,
     a {
       font-size: 16px !important;
@@ -373,7 +435,6 @@ body {
   }
 
   #projects {
-
     p,
     a {
       font-size: 12px !important;
@@ -419,12 +480,12 @@ body {
 
 .Main2 .hero-section {
   background: rgb(30, 24, 46);
-  background: linear-gradient(90deg,
-      rgba(30, 24, 46, 1) 42%,
-      rgba(23, 30, 55, 1) 77%);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 24, 46, 1) 42%,
+    rgba(23, 30, 55, 1) 77%
+  );
 }
-
-
 
 @media screen and (max-width: "1000px") {
   .content {
@@ -432,5 +493,4 @@ body {
       display: none;
     }
   }
-
 }
