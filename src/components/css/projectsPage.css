@@ -1,0 +1,333 @@
+.projects-page {
+  width: 100%;
+}
+.projects-page .container {
+  width: 85%;
+  margin: 0 auto;
+  padding: 40px 0px;
+}
+.projects-page .container h1 {
+  font-size: 48px;
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.projects-page .container ul {
+  margin: 0 auto;
+  width: 80%;
+}
+.projects-page .container ul li {
+  color: #ff3870;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+.projects-page .container ul li:hover {
+  cursor: pointer;
+}
+.projects-page .container .line-wrapper {
+  width: 65%;
+  height: 3px;
+  border: none;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 40px;
+  margin: 10px auto;
+  padding: 0px;
+  position: relative;
+}
+.projects-page .container .line-wrapper .line {
+  position: absolute;
+  width: 37%;
+  border: 2px solid #ff3870;
+  border-radius: 15px;
+  top: 0px;
+  left: 0%;
+  transition: transform 0.3s linear;
+}
+.projects-page .container .line-wrapper .mine-active {
+  transform: translateX(0);
+}
+.projects-page .container .line-wrapper .students-active {
+  transform: translateX(170%);
+}
+.projects-page .container .mine-projects,
+.projects-page .container .students-projects {
+  margin-top: 170px;
+}
+.projects-page .container .mine-projects .project-box,
+.projects-page .container .students-projects .project-box {
+  width: 100%;
+  border: none;
+  gap: 60px;
+  margin-bottom: 150px;
+}
+.projects-page .container .mine-projects .project-box .content,
+.projects-page .container .students-projects .project-box .content {
+  padding: 10px;
+  border: none;
+  color: white;
+  text-align: left;
+}
+.projects-page .container .mine-projects .project-box .content .project-number,
+.projects-page .container .students-projects .project-box .content .project-number {
+  color: #568ea3;
+  font-size: 33px;
+  font-weight: 450;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.projects-page .container .mine-projects .project-box .content .porject-name,
+.projects-page .container .students-projects .project-box .content .porject-name {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+.projects-page .container .mine-projects .project-box .content p,
+.projects-page .container .students-projects .project-box .content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.projects-page .container .mine-projects .project-box .content .accordion,
+.projects-page .container .students-projects .project-box .content .accordion {
+  display: none;
+}
+.projects-page .container .mine-projects .project-box .content .read-more div,
+.projects-page .container .students-projects .project-box .content .read-more div {
+  display: flex;
+  align-items: center;
+}
+.projects-page .container .mine-projects .project-box .content .read-more div svg,
+.projects-page .container .students-projects .project-box .content .read-more div svg {
+  margin-right: 15px;
+  width: 20px;
+  height: 19px;
+}
+.projects-page .container .mine-projects .project-box .image,
+.projects-page .container .students-projects .project-box .image {
+  border: none;
+}
+.projects-page .container .mine-projects .project-box .image .image-wrapper,
+.projects-page .container .students-projects .project-box .image .image-wrapper {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+.projects-page .container .mine-projects .project-box .image .image-wrapper .buttons,
+.projects-page .container .students-projects .project-box .image .image-wrapper .buttons {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 30%;
+  bottom: calc(50% - 80px);
+  z-index: -1;
+  opacity: 0;
+}
+.projects-page .container .mine-projects .project-box .image .image-wrapper .buttons .go-to-code,
+.projects-page .container .mine-projects .project-box .image .image-wrapper .buttons .go-to-app,
+.projects-page .container .students-projects .project-box .image .image-wrapper .buttons .go-to-code,
+.projects-page .container .students-projects .project-box .image .image-wrapper .buttons .go-to-app {
+  width: 100%;
+  padding: 12px 20px 5px 20px;
+  min-height: 50px;
+  color: white(0, 0, 0, 0.3);
+  border-radius: 5px;
+  text-align: center;
+  background: darkblue;
+  font-weight: 450;
+}
+.projects-page .container .mine-projects .project-box .image .image-wrapper .buttons .go-to-code,
+.projects-page .container .students-projects .project-box .image .image-wrapper .buttons .go-to-code {
+  margin-bottom: 25px;
+}
+.projects-page .container .mine-projects .project-box .image .image-wrapper .wrapper,
+.projects-page .container .students-projects .project-box .image .image-wrapper .wrapper {
+  border: 20px solid;
+  border-color: #568ea3;
+  background-color: #568ea3;
+  border-radius: 10px;
+  width: 100%;
+  height: 400px;
+}
+.projects-page .container .mine-projects .project-box .image .image-wrapper .img,
+.projects-page .container .students-projects .project-box .image .image-wrapper .img {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-position: center;
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.12s linear;
+}
+.projects-page .container .mine-projects .project-box .image .image-wrapper .img:hover,
+.projects-page .container .students-projects .project-box .image .image-wrapper .img:hover {
+  transform: translate(8%, -15%);
+}
+.projects-page .container .mine-projects .project-box .image .image-wrapper .img1,
+.projects-page .container .students-projects .project-box .image .image-wrapper .img1 {
+  background-image: url("../../assets/img/snobella.png");
+  height: 100%;
+}
+.projects-page .container .mine-projects .project-box .image .image-wrapper .img2,
+.projects-page .container .students-projects .project-box .image .image-wrapper .img2 {
+  background-image: url("../../assets/img/stylish.png");
+  height: 100%;
+}
+.projects-page .container .mine-projects .project-box .image .image-wrapper .img3,
+.projects-page .container .students-projects .project-box .image .image-wrapper .img3 {
+  background-image: url("../../assets/img/pingCalc.png");
+  height: 100%;
+}
+.projects-page .container .mine-projects .project-box .image .image-wrapper .img4,
+.projects-page .container .students-projects .project-box .image .image-wrapper .img4 {
+  background-image: url("../../assets/img/sign-up-form.png");
+  height: 100%;
+  background-position: top;
+}
+
+@media (max-width: 576px) {
+  .projects-page .container .project-box .project-number {
+    display: none;
+  }
+  .projects-page .container ul li {
+    font-size: 17px;
+  }
+}
+@media (max-width: 1200px) {
+  .projects-page .container .project-box .image .img {
+    margin-top: 140px;
+  }
+  .projects-page .container .mine-projects {
+    margin-top: 70px;
+  }
+  .projects-page .container .students-projects {
+    margin-top: 70px;
+  }
+}
+@media (max-width: 992px) {
+  .projects-page .container ul li {
+    font-size: 28px;
+  }
+  .projects-page .container .content .project-number {
+    display: none;
+  }
+}
+@media (max-width: 773px) {
+  .projects-page .container ul li {
+    font-size: 21px;
+    padding: 0px;
+    margin-top: 0px;
+  }
+}
+@media (max-width: 607px) {
+  .projects-page .container ul li {
+    font-size: 17px;
+    padding: 0px;
+    margin-top: 0px;
+  }
+}
+@media (max-width: 375px) {
+  .projects-page .container #product-heading {
+    margin-top: 15px !important;
+  }
+  .projects-page .container .students {
+    text-align: center;
+  }
+  .projects-page .container ul .mine {
+    text-align: center;
+  }
+  .projects-page .container .project-box .image .image-wrapper .buttons .go-to-app,
+  .go-to-code {
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .projects-page .container .project-box .container {
+    border: 1px solid red;
+  }
+  .projects-page .container .mine-projects .project-box .image .image-wrapper .img:hover {
+    transform: none;
+  }
+  .projects-page .container .students-projects .project-box .image .image-wrapper .img:hover {
+    transform: none;
+  }
+  .projects-page .container .content .porject-description,
+  .projects-page .container .content .project-number,
+  .projects-page .container .content .read-more {
+    display: none;
+  }
+  .projects-page .container .mine-projects .project-box,
+  .content .accordion {
+    display: flex !important;
+    margin-bottom: 20px;
+    z-index: 2000;
+  }
+  .projects-page .container .students-projects .project-box,
+  .content .accordion {
+    display: flex !important;
+    margin-bottom: 20px;
+    z-index: 2000;
+  }
+  .projects-page .container .mine-projects .project-box {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 90px;
+  }
+  .projects-page .container .mine-projects .project-box .content {
+    padding: 0px;
+    order: 1;
+  }
+  .projects-page .container .mine-projects .project-box .image {
+    order: 2;
+    transition: transform 0.25s linear;
+    position: relative;
+    z-index: 1;
+  }
+  .projects-page .container .project-box .image.accordion-open {
+    transform: translateY(50px);
+    z-index: 2;
+  }
+  .projects-page .container .students-projects .project-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 90px;
+  }
+  .projects-page .container .students-projects .project-box .content {
+    padding: 0px;
+    width: 100%;
+    order: 1;
+  }
+  .projects-page .container .students-projects .project-box .image {
+    order: 2;
+  }
+  .projects-page .container .students-projects .project-box .image .image-wrapper .img {
+    filter: blur(1px);
+    transition: filter 0.3s ease-in-out;
+  }
+  .projects-page .container .students-projects .project-box .image .image-wrapper .buttons {
+    opacity: 1;
+    filter: blur(0);
+    transition: opacity 0.3s ease-in-out;
+    z-index: 5;
+  }
+  .projects-page .container .mine-projects .project-box .image .image-wrapper .img {
+    filter: blur(1px);
+    transition: filter 1s ease;
+  }
+  .projects-page .container .mine-projects .project-box .image .image-wrapper .buttons {
+    opacity: 1;
+    filter: blur(0);
+    transition: opacity 0.3s ease;
+    z-index: 5;
+  }
+}/*# sourceMappingURL=projectsPage.css.map */

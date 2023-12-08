@@ -1,0 +1,304 @@
+body {
+  width: 100vw;
+  overflow-y: scroll !important;
+  height: 100% !important;
+}
+
+.manager {
+  margin: 0 auto;
+  padding-top: 30px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+}
+.manager .namesAdmin {
+  display: flex;
+  width: max-content;
+  justify-content: space-between;
+}
+.manager .namesAdmin h2 {
+  color: white;
+  margin-bottom: 20px !important;
+}
+.manager .namesAdmin li {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.manager .line-wrapper {
+  min-width: 100px;
+  height: 3px;
+  border: none;
+  width: 10vw;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 40px;
+  margin: 10px auto;
+  padding: 0px;
+  position: relative;
+}
+.manager .line-wrapper .line {
+  position: absolute;
+  width: 40%;
+  border: 2px solid #5df8f5;
+  border-radius: 15px;
+  top: 0px;
+  left: 0%;
+  transition: transform 0.3s linear;
+}
+.manager .line-wrapper .projects-active {
+  transform: translateX(0);
+}
+.manager .line-wrapper .blog-active {
+  transform: translateX(150%);
+}
+.manager .openAdd {
+  justify-self: left;
+}
+.manager .projects,
+.manager .blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+}
+.manager .projects form,
+.manager .blog form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 15px 0;
+}
+@media screen and (max-width: 600px) {
+  .manager .projects form,
+  .manager .blog form {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.manager .projects h1,
+.manager .projects h2,
+.manager .projects input,
+.manager .projects textarea,
+.manager .blog h1,
+.manager .blog h2,
+.manager .blog input,
+.manager .blog textarea {
+  margin: 10px;
+}
+.manager .projects input,
+.manager .projects textarea,
+.manager .blog input,
+.manager .blog textarea {
+  padding: 15px 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  width: 30%;
+  background-color: transparent;
+  margin-bottom: 0;
+  height: 50px;
+}
+@media screen and (max-width: 600px) {
+  .manager .projects input,
+  .manager .projects textarea,
+  .manager .blog input,
+  .manager .blog textarea {
+    width: 70%;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}
+.manager .projects input::placeholder,
+.manager .projects textarea::placeholder,
+.manager .blog input::placeholder,
+.manager .blog textarea::placeholder {
+  font-size: 16px;
+  color: white;
+  font-size: 14px;
+}
+.manager .projects input:focus,
+.manager .projects textarea:focus,
+.manager .blog input:focus,
+.manager .blog textarea:focus {
+  color: white;
+  border: 1px solid #5df8f5;
+  outline: none;
+}
+.manager .projects button,
+.manager .blog button {
+  margin-top: 10px;
+  padding: 15px 25px;
+  border: 1px solid #5df8f5;
+  border-radius: 5px;
+  font-weight: 500;
+  background-color: #5df8f5;
+  font-size: 16px;
+  cursor: pointer;
+}
+.manager .projects .container,
+.manager .blog .container {
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.manager .projects .table,
+.manager .blog .table {
+  margin-top: 20px;
+  width: 100%;
+  border: 1px solid #323222;
+  border-radius: 5px;
+}
+.manager .projects .table .table-header,
+.manager .blog .table .table-header {
+  display: flex;
+  width: 100%;
+  background: #568ea3;
+  padding: 10px 10px;
+  justify-content: space-between;
+}
+.manager .projects .table .table-row,
+.manager .blog .table .table-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  padding: 10px 10px;
+  justify-content: space-around;
+}
+.manager .projects .table .table-row .projImgAdmin img,
+.manager .blog .table .table-row .projImgAdmin img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+@media screen and (max-width: 600px) {
+  .manager .projects .table .table-row .projImgAdmin img,
+  .manager .blog .table .table-row .projImgAdmin img {
+    width: 20px;
+    height: 20px;
+  }
+}
+.manager .projects .table .table-row button,
+.manager .blog .table .table-row button {
+  margin-top: 0;
+  padding: 10px 25px;
+}
+@media screen and (max-width: 600px) {
+  .manager .projects .table .table-row button,
+  .manager .blog .table .table-row button {
+    padding: 5px 10px;
+    margin: 0 5px;
+  }
+}
+.manager .projects .table .table-row .editBtnAdmin,
+.manager .blog .table .table-row .editBtnAdmin {
+  background-color: transparent;
+  border: 1px solid #5df8f5;
+  color: #5df8f5;
+  transition: 200ms linear;
+}
+.manager .projects .table .table-row .editBtnAdmin:hover,
+.manager .blog .table .table-row .editBtnAdmin:hover {
+  background-color: #5df8f5;
+  color: #1d1e2c;
+}
+.manager .projects .table .table-row .deleteBtnAdmin,
+.manager .blog .table .table-row .deleteBtnAdmin {
+  border: 1px solid red;
+  color: red;
+  background-color: transparent;
+  transition: 200ms linear;
+}
+.manager .projects .table .table-row .deleteBtnAdmin:hover,
+.manager .blog .table .table-row .deleteBtnAdmin:hover {
+  background-color: red;
+  color: #1d1e2c;
+}
+.manager .projects .table .table-data,
+.manager .projects .table .header__item,
+.manager .blog .table .table-data,
+.manager .blog .table .header__item {
+  flex: 1 1 20%;
+  text-align: center;
+}
+.manager h1 {
+  text-align: center;
+}
+.manager input[type=file] {
+  display: none;
+}
+.manager label[for=file] {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 0.5em;
+  justify-items: center;
+  align-content: center;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  background: hsla(0, 0%, 0%, 0);
+  padding: 0.85em 1.5em;
+  transition: 200ms;
+  font-weight: 500;
+}
+.manager label[for=file]:hover, .manager label[for=file]:focus, .manager label[for=file]:active {
+  background: #5df8f5;
+  border-color: #5df8f5;
+  color: #1d1e2c;
+  font-weight: 500;
+}
+.manager .fileInp {
+  margin: 10px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+.manager .fileInp label {
+  margin: 0 auto;
+}
+.manager .switcher {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+hr {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.searchBar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+.searchBar .searchInp {
+  width: 50%;
+}
+
+@media only screen and (max-width: 860px) {
+  .manager .projects table,
+  .manager .blog table {
+    width: 100vw;
+    padding: 0;
+  }
+  .projects {
+    padding: 0;
+  }
+}/*# sourceMappingURL=style.css.map */

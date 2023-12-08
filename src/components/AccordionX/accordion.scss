@@ -1,0 +1,72 @@
+.acco-container {
+  //   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 12px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #568ea3;
+  margin: 0px;
+  details {
+    font-size: 1rem;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 8px;
+    position: relative;
+    transition: all 1s linear;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  details[open] {
+    background-color: #568ea3;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  summary {
+    user-select: none;
+    font-weight: 600;
+    display: flex;
+    list-style: none;
+    padding: 1em;
+    align-items: center;
+    border-radius: 8px;
+  }
+
+  details[open] summary svg {
+    // stroke: red;
+    transform: rotate(90deg);
+  }
+
+  .acco-container summary:focus {
+    outline: none !important;
+  }
+
+  .acco-title {
+    color: white;
+    width: 90%;
+    transition: all 1s linear;
+  }
+
+  .acco-content {
+    color: white;
+    padding: 02em 1em 1em 1em;
+    font-weight: 300;
+    line-height: 1.5;
+    border-radius: 8px;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .expand-icon {
+    pointer-events: none;
+    position: absolute;
+    right: 1em;
+    transition: all 1s linear;
+  }
+}

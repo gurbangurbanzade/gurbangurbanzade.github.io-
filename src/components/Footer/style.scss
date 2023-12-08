@@ -1,0 +1,88 @@
+footer {
+  color: #f9f5ff;
+  font-size: 150px;
+  font-weight: 900;
+  width: 100% !important;
+  /* transform: rotateY(35deg); */
+  text-align: "end";
+  transform-style: preserve-3d;
+  padding-right: 50px;
+  font-size: 8.8vw;
+  letter-spacing: 0.02em;
+  line-height: 0.9em;
+  font-family: "Orbitron" !important;
+  text-transform: uppercase;
+  background: rgb(30, 24, 46);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 24, 46, 1) 42%,
+    rgba(23, 30, 55, 1) 77%
+  );
+
+  .container {
+    margin: 0 auto;
+  }
+
+  .footerItems {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 0 !important;
+
+    .leftFooter {
+      font-size: 6.6vw;
+      padding-left: 30px;
+      font-weight: 600;
+      color: #5df8f5;
+    }
+
+    .rightFooter {
+      perspective: 900px;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      justify-content: right;
+
+      .links {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transform-origin: right;
+        transform-style: preserve-3d;
+        transform: rotateY(-30deg);
+        transition: 200ms ease-in-out;
+      }
+
+      .links:hover {
+        transform-origin: right;
+        transform-style: preserve-3d;
+        transform: rotateY(-20deg);
+      }
+
+      .links:active {
+        transform-origin: right;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg);
+      }
+
+      .p:hover {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #00fffb;
+      }
+
+      .line {
+        height: 8rem;
+        width: 2px;
+        background-color: white;
+        transform: rotate(-160deg);
+        margin-right: 45px;
+      }
+
+      .line:hover {
+        background-color: #5df8f5;
+      }
+    }
+  }
+}

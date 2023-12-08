@@ -1,0 +1,100 @@
+$animationSpeed: 40s;
+
+// Animation
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 10));
+  }
+}
+
+@mixin white-gradient {
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%);
+}
+
+.flexer {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg,
+      rgba(30, 24, 46, 1) 42%,
+      rgba(23, 30, 55, 1) 77%);
+
+  // Styling
+  .slider {
+    // background: white;
+    // height: 100px;
+    padding: 30vh 0;
+    overflow: hidden;
+    // width: 960px;
+    // width: 40vw;
+    // background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 65%, rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 1) 85%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &::before,
+  &::after {
+    // @include white-gradient;
+    content: "";
+    height: max-content;
+    width: 200px;
+    z-index: 2;
+    height: 100%;
+    width: 40vw;
+  }
+
+  &::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+    // background: linear-gradient(to right, rgba(30, 24, 46, 1) 0%, rgba(30, 24, 46, 0) 100%);
+  }
+
+  &::before {
+    left: 0;
+    top: 0;
+    // background: linear-gradient(to right, rgba(30, 24, 46, 1) 0%, rgba(30, 24, 46, 0) 100%);
+    // background-color: red;
+    height: 100%;
+    // width: 30%;
+  }
+
+  .slide-track {
+    animation: scroll $animationSpeed linear infinite;
+    display: flex;
+    width: 100%;
+    // background-color: white;
+  }
+
+  .slide {
+    height: max-content;
+    width: 200px;
+    margin: 0 20px;
+  }
+}
+
+.slider {
+  position: relative;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  // background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  pointer-events: none;
+}
+
+@media screen and (max-width:"1000px") {
+  .flexer .slider {
+    padding: 10vh;
+  }
+}

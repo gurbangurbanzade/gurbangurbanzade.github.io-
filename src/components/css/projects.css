@@ -1,0 +1,304 @@
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.45, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+#projects {
+  height: 100vh;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background: rgb(30, 24, 46);
+  background: linear-gradient(90deg, rgb(30, 24, 46) 42%, rgb(23, 30, 55) 77%);
+  width: 100%;
+}
+#projects .container {
+  width: 40%;
+}
+#projects .projectsInfo {
+  display: flex;
+  flex-direction: column;
+}
+#projects .projectsInfo .portfolio-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#projects .projectsInfo .portfolio-box .portfolio {
+  display: flex;
+  justify-content: center;
+}
+#projects .projectsInfo .portfolio-box .portfolio h1 {
+  color: #f9f5ff;
+  font-weight: bold;
+  font-size: 60px;
+  cursor: pointer;
+  margin-bottom: 0px;
+}
+#projects .projectsInfo .portfolio-box .portfolio h1:hover {
+  color: #ff3870;
+  animation: rubberBand 1s infinite;
+}
+#projects .projectsInfo .portfolio-box .previous {
+  display: flex;
+  justify-content: center;
+}
+#projects .projectsInfo .portfolio-box .previous h1 {
+  color: #f9f5ff;
+  font-size: 50px;
+  font-weight: bold;
+  font-size: 60px;
+  cursor: pointer;
+  margin-bottom: 0px;
+}
+#projects .projectsInfo .portfolio-box .previous h1:hover {
+  color: #ff3870;
+  animation: rubberBand 1s infinite !important;
+}
+#projects .projectsInfo .projects {
+  display: flex;
+  justify-content: center;
+}
+#projects .projectsInfo h1 {
+  color: #f9f5ff;
+  font-size: 50px;
+  font-weight: bold;
+  font-size: 60px;
+  cursor: pointer;
+  margin-bottom: 0px;
+}
+#projects .projectsInfo h1:hover {
+  color: #ff3870;
+  animation: rubberBand 1s infinite !important;
+}
+#projects .projectsInfo span {
+  margin-left: 25px;
+}
+#projects p {
+  font-size: 20px;
+  color: #f9f5ff;
+  padding: 24px 0;
+  text-align: center;
+}
+#projects p a {
+  color: #ff3870;
+}
+#projects p a:hover {
+  text-decoration: underline;
+  color: #ff3870;
+}
+#projects a {
+  width: 200px;
+  font-size: 24px;
+  color: #5df8f5;
+  position: relative;
+  transition: transform 1s ease;
+}
+#projects a span {
+  display: inline-block;
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+}
+#projects a:hover {
+  color: #28d3d1;
+}
+#projects a:hover span {
+  display: inline-block;
+  transform: translateX(10px);
+  transition: transform 0.5s ease;
+}
+
+.Snobella {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(30, 24, 46);
+  background: linear-gradient(90deg, rgb(30, 24, 46) 42%, rgb(23, 30, 55) 77%);
+}
+.Snobella .left p:nth-child(1) {
+  font-size: 18px;
+  font-weight: normal;
+  color: grey;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.Snobella .left .snobella {
+  display: flex;
+}
+.Snobella .left .snobella h1 {
+  color: #f9f5ff;
+  font-size: 50px;
+  cursor: pointer;
+}
+.Snobella .left .snobella h1:hover {
+  color: #ff3870;
+  animation: rubberBand 1s infinite;
+}
+.Snobella .left p {
+  color: #f9f5ff;
+}
+.Snobella .left .viewCodes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.Snobella .left .viewCodes a {
+  width: 200px;
+  font-size: 24px;
+  position: relative;
+  transition: transform 1s ease;
+}
+.Snobella .left .viewCodes a span {
+  display: inline-block;
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+}
+.Snobella .left .viewCodes a:hover span {
+  display: inline-block;
+  transform: translateX(10px);
+  transition: transform 0.5s ease;
+}
+.Snobella .left .viewCodes a:nth-child(1) {
+  color: #5df8f5;
+}
+.Snobella .left .viewCodes a:nth-child(2) {
+  color: #ff3870;
+}
+.Snobella .right .img-wrapper {
+  width: 700px;
+  height: 450px;
+}
+.Snobella .right .img-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.Calculator {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(30, 24, 46);
+  background: linear-gradient(90deg, rgb(30, 24, 46) 42%, rgb(23, 30, 55) 77%);
+}
+.Calculator .left p:nth-child(1) {
+  font-size: 18px;
+  font-weight: normal;
+  color: grey;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.Calculator .left .calculator {
+  display: flex;
+}
+.Calculator .left .calculator h1 {
+  color: #f9f5ff;
+  font-size: 50px;
+  cursor: pointer;
+}
+.Calculator .left .calculator h1:hover {
+  color: #ff3870;
+  animation: rubberBand 1s infinite;
+}
+.Calculator .left p {
+  color: #f9f5ff;
+}
+.Calculator .left .viewCodes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.Calculator .left .viewCodes a {
+  width: 200px;
+  font-size: 24px;
+  position: relative;
+  transition: transform 1s ease;
+}
+.Calculator .left .viewCodes a span {
+  display: inline-block;
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+}
+.Calculator .left .viewCodes a:hover span {
+  display: inline-block;
+  transform: translateX(10px);
+  transition: transform 0.5s ease;
+}
+.Calculator .left .viewCodes a:nth-child(1) {
+  color: #5df8f5;
+}
+.Calculator .left .viewCodes a:nth-child(2) {
+  color: #ff3870;
+}
+.Calculator .right .img-wrapper {
+  width: 700px;
+  height: 450px;
+}
+.Calculator .right .img-wrapper img {
+  width: 500px;
+  height: 100%;
+  object-fit: contain;
+}
+
+.Main2 .Snobella,
+.Main2 .Calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Main2 .Snobella .left,
+.Main2 .Calculator .left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Main2 .Snobella .left p,
+.Main2 .Calculator .left p {
+  text-align: center;
+}
+.Main2 .Snobella .right .img-wrapper,
+.Main2 .Calculator .right .img-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.seeProj {
+  display: flex;
+  justify-content: center;
+}
+
+.Main2 .Calculator,
+.Main2 .Snobella {
+  flex-wrap: wrap;
+}
+
+.Main2 .Snobella .right .img-wrapper img {
+  width: 80%;
+}
+
+.left p:nth-child(3) {
+  padding: 0 100px;
+}/*# sourceMappingURL=projects.css.map */

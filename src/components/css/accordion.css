@@ -1,0 +1,53 @@
+.acco-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 12px;
+  width: 100%;
+  border-radius: 1em;
+  background-color: #568ea3;
+  margin: 0px;
+}
+.acco-container details {
+  font-size: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 8px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.acco-container details[open] {
+  background-color: #568ea3;
+}
+.acco-container summary {
+  user-select: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  list-style: none;
+  padding: 1em;
+  align-items: center;
+}
+.acco-container details[open] summary svg {
+  transform: rotate(90deg);
+}
+.acco-container summary:focus {
+  outline: none;
+}
+.acco-container .acco-title {
+  color: white;
+  width: 90%;
+  transition: all 250ms ease-in-out;
+}
+.acco-container .acco-content {
+  color: white;
+  padding: 2em 1em 1em 1em;
+  font-weight: 300;
+  line-height: 1.5;
+}
+.acco-container .expand-icon {
+  pointer-events: none;
+  position: absolute;
+  right: 1em;
+  transition: all 150ms ease-out;
+}/*# sourceMappingURL=accordion.css.map */

@@ -1,0 +1,107 @@
+body {
+  background-color: #1d1e2c;
+}
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.45, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+.Main1 .intro,
+.Main2 .intro {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: rgb(30, 24, 46);
+  background: linear-gradient(90deg, rgb(30, 24, 46) 42%, rgb(23, 30, 55) 77%);
+}
+
+.intro-part {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.left,
+.right {
+  width: 40%;
+  box-sizing: border-box;
+}
+
+.left .intro-content {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  font-size: 40px;
+  margin-bottom: 24px;
+  font-size: 40px;
+  text-align: center;
+}
+.left .intro-content .word {
+  display: flex;
+}
+.left .intro-content h1 {
+  color: white;
+  font-size: 40px;
+  text-align: left;
+  font-weight: bold;
+  cursor: pointer;
+}
+.left .intro-content h1:hover {
+  color: #ff3870;
+  animation: rubberBand 1s infinite;
+}
+
+.left p:nth-child(2) {
+  color: #5df8f5 !important;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: left;
+}
+
+.right p {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 14px;
+  text-align: left;
+  z-index: 400;
+}
+
+@media (max-width: 1100px) {
+  .left,
+  .right {
+    width: 100%;
+  }
+  .intro-part {
+    --animate-duration: 1s;
+    animation-delay: 0.5s;
+    padding: 30px;
+  }
+  .intro-part .left p,
+  .intro-part .right p {
+    text-align: center;
+  }
+}/*# sourceMappingURL=intro.css.map */
