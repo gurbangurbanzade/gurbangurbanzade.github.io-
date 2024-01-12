@@ -79,7 +79,7 @@ const Hero = ({ onButtonClick }) => {
         <div className="star"></div>
         <div className="star"></div>
       </div>
-      <div className="content">
+      <div className="content grid grid-rows-4">
         {/* <ul className="socials">
           <li>
             <svg
@@ -137,7 +137,7 @@ const Hero = ({ onButtonClick }) => {
           </li>
         </ul> */}
         <div className="imgBox">
-          <img src={ProfileImg} alt="" />
+          {/* <img src={ProfileImg} alt="" /> */}
           <img src={Arrow1} className="arrow1" alt="" />
           <img src={Arrow2} className="arrow2" alt="" />
           <img src={Arrow3} className="arrow3" alt="" />
@@ -145,14 +145,14 @@ const Hero = ({ onButtonClick }) => {
           <img src={Profile1} className="profile1  animate__delay-2s" alt="" />
           <img src={Slash} className="slash" alt="" />
         </div>
-        <div>
+        <div className="">
           <h1>
             Hello, I am <span>Gurban</span>.
-            <br /> Web and Mobile developers.
+            <br /> Web and Mobile developer.
           </h1>
           <button className="btn" onClick={onButtonClick} style={{ zIndex: 1 }}>
-            View my work {"  "}{" "}
-            <svg
+            View my work
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               height="16"
               width="16"
@@ -163,7 +163,7 @@ const Hero = ({ onButtonClick }) => {
                 d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
                 fill="white"
               />
-            </svg>
+            </svg> */}
           </button>
         </div>
       </div>
