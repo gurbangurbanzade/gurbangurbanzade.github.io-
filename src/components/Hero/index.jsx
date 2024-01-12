@@ -136,16 +136,22 @@ const Hero = ({ onButtonClick }) => {
             </svg>
           </li>
         </ul> */}
-        <div className="imgBox">
-          {/* <img src={ProfileImg} alt="" /> */}
-          <img src={Arrow1} className="arrow1" alt="" />
-          <img src={Arrow2} className="arrow2" alt="" />
-          <img src={Arrow3} className="arrow3" alt="" />
-          <img src={Arrow4} className="arrow4" alt="" />
-          <img src={Profile1} className="profile1  animate__delay-2s" alt="" />
-          <img src={Slash} className="slash" alt="" />
+        <div className="logoBox">
+          <div className="imgBox">
+            {/* <img src={ProfileImg} alt="" /> */}
+            <img src={Arrow1} className="arrow1" alt="" />
+            <img src={Arrow2} className="arrow2" alt="" />
+            <img src={Arrow3} className="arrow3" alt="" />
+            <img src={Arrow4} className="arrow4" alt="" />
+            <img
+              src={Profile1}
+              className="profile1  animate__delay-2s"
+              alt=""
+            />
+            <img src={Slash} className="slash" alt="" />
+          </div>
         </div>
-        <div className="">
+        <div className="textBox">
           <h1>
             Hello, I am <span>Gurban</span>.
             <br /> Web and Mobile developer.

@@ -85,116 +85,127 @@ body {
   .content {
     display: flex;
     align-items: center;
-    .imgBox {
-      height: 500px;
-      width: 500px;
-      position: relative;
-
-      .profile1 {
-        height: 400px;
-        position: absolute;
-        left: 200px;
-        height: 400px;
-        top: 20px;
-        opacity: 1;
-        animation: bounceInUp; /* referring directly to the animation's @keyframe declaration */
-        animation-duration: 1s; /* don't forget to set a duration! */
-        z-index: 2;
-        --animate-delay: 2s;
-      }
-
-      .arrow1 {
-        position: absolute;
-        left: 100px;
-        height: 130px;
-        top: 150px;
-        opacity: 1;
-        animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
-        animation-duration: 1s; /* don't forget to set a duration! */
-        z-index: 1;
-      }
-      .arrow2 {
-        position: absolute;
-        left: 100px;
-        height: 130px;
-        top: 273px;
-        opacity: 1;
-        animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
-        animation-duration: 1s;
-        z-index: 3;
-      }
-      .arrow3 {
-        position: absolute;
-        left: 370px;
-        height: 130px;
-        top: 229px;
-        opacity: 1;
-        animation: backInRight; /* referring directly to the animation's @keyframe declaration */
-        animation-duration: 1s; /* don't forget to set a duration! */
-        z-index: 1;
-      }
-      .arrow4 {
-        position: absolute;
-        left: 370px;
-        height: 130px;
-        top: 353px;
-        opacity: 1;
-        animation: backInRight; /* referring directly to the animation's @keyframe declaration */
-        animation-duration: 1s;
-        z-index: 3;
-      }
-      .slash {
-        position: absolute;
-        left: 265px;
-        top: 30px;
+    .logoBox {
+      height: 100vh;
+      width: 50vw;
+      display: flex;
+      align-items: center;
+      .imgBox {
+        position: relative;
+        width: 450px;
         height: 450px;
-        opacity: 1;
-        animation: bounceInDown; /* referring directly to the animation's @keyframe declaration */
-        animation-duration: 1s;
-        z-index: 1;
-        // transform: rotate(10deg);
+
+        .profile1 {
+          height: 400px;
+          position: absolute;
+          left: 200px;
+          height: 400px;
+          top: 20px;
+          opacity: 1;
+          animation: bounceInUp; /* referring directly to the animation's @keyframe declaration */
+          animation-duration: 1s; /* don't forget to set a duration! */
+          z-index: 2;
+          --animate-delay: 2s;
+        }
+
+        .arrow1 {
+          position: absolute;
+          left: 100px;
+          height: 130px;
+          top: 150px;
+          opacity: 1;
+          animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
+          animation-duration: 1s; /* don't forget to set a duration! */
+          z-index: 1;
+        }
+        .arrow2 {
+          position: absolute;
+          left: 100px;
+          height: 130px;
+          top: 273px;
+          opacity: 1;
+          animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
+          animation-duration: 1s;
+          z-index: 3;
+        }
+        .arrow3 {
+          position: absolute;
+          left: 370px;
+          height: 130px;
+          top: 229px;
+          opacity: 1;
+          animation: backInRight; /* referring directly to the animation's @keyframe declaration */
+          animation-duration: 1s; /* don't forget to set a duration! */
+          z-index: 1;
+        }
+        .arrow4 {
+          position: absolute;
+          left: 370px;
+          height: 130px;
+          top: 353px;
+          opacity: 1;
+          animation: backInRight; /* referring directly to the animation's @keyframe declaration */
+          animation-duration: 1s;
+          z-index: 3;
+        }
+        .slash {
+          position: absolute;
+          left: 265px;
+          top: 30px;
+          height: 450px;
+          opacity: 1;
+          animation: bounceInDown; /* referring directly to the animation's @keyframe declaration */
+          animation-duration: 1s;
+          z-index: 1;
+          // transform: rotate(10deg);
+        }
       }
     }
-    h1 {
-      // padding: 0 30px;
-      color: #5df8f5;
-      font-size: 45px;
-      font-weight: 350;
-      margin-bottom: 25px;
-      text-align: left;
-      margin-left: 135px;
+    .textBox {
+      height: 100vh;
+      width: 50vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 30px;
 
-      span {
-        color: #ff3870;
+      h1 {
+        color: #5df8f5;
+        font-size: 45px;
+        font-weight: 350;
+        margin-bottom: 25px;
+        text-align: left;
+        span {
+          color: #ff3870;
+        }
       }
-    }
-
-    .btn {
-      width: 200px;
-      height: 50px;
-      padding: 0px 30px 0px 0px;
-      background-color: transparent;
-      border: 2px solid white;
-      color: white;
-      font-size: 20px;
-      cursor: pointer;
-      display: block;
-      margin: 0 auto;
-      position: relative;
-
-      .arrow-left {
-        margin-left: 10px;
-        position: absolute;
-        top: calc(50% - 16px / 2);
-        transition: transform 0.5s ease;
-      }
-
-      &:hover {
-        background-color: #ff3870;
-        border: none;
+      .btn {
+        width: 200px;
+        height: 50px;
+        padding: 0px 30px 0px 0px;
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+        position: relative;
 
         .arrow-left {
-          transform: rotate(90deg);
+          margin-left: 10px;
+          position: absolute;
+          top: calc(50% - 16px / 2);
+          transition: transform 0.5s ease;
+        }
+
+        &:hover {
+          background-color: #ff3870;
+          border: none;
+
+          .arrow-left {
+            transform: rotate(90deg);
+          }
         }
       }
     }
@@ -327,44 +338,54 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        .imgBox {
+        justify-content: center;
+        width: 100%;
+        .logoBox {
           height: 50vh;
-          position: relative;
-          .profile1 {
-            left: 70px;
-            top: 60px;
-            height: 230px;
-            // background-color: red;
-          }
-          .arrow1 {
-            left: 20px;
-            height: 70px;
-            top: 135px;
-          }
-          .arrow2 {
-            left: 20px;
-            height: 70px;
-            top: 200px;
-            opacity: 1;
-          }
-          .arrow3 {
-            left: 180px;
-            height: 70px;
-            top: 175px;
-          }
-          .arrow4 {
-            left: 180px;
-            height: 70px;
-            top: 240px;
-          }
-          .slash {
-            left: 120px;
-            top: 60px;
-            height: 250px;
-            width: 90px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          .imgBox {
+            width: 330px;
+            height: 330px;
+            position: relative;
+            .profile1 {
+              left: 70px;
+              top: 60px;
+              height: 230px;
+              // background-color: red;
+            }
+            .arrow1 {
+              left: 20px;
+              height: 70px;
+              top: 135px;
+            }
+            .arrow2 {
+              left: 20px;
+              height: 70px;
+              top: 200px;
+              opacity: 1;
+            }
+            .arrow3 {
+              left: 180px;
+              height: 70px;
+              top: 175px;
+            }
+            .arrow4 {
+              left: 180px;
+              height: 70px;
+              top: 240px;
+            }
+            .slash {
+              left: 120px;
+              top: 60px;
+              height: 250px;
+              width: 90px;
+            }
           }
         }
-        div {
+        .textBox {
+          padding-left: 0px;
           width: 100%;
           height: 50vh;
           h1 {
