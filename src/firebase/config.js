@@ -6,7 +6,8 @@ import { initializeApp } from "firebase/app";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyDb2ai2YM6m342ptp3b74zKeghqy73sqq8",
-  authDomain: "portfolio-ec570.firebaseapp.com",
+  // authDomain: "portfolio-ec570.firebaseapp.com",
+  authDomain: "https://portfolio-ec570.firebaseapp.com/__/auth/handler",
   projectId: "portfolio-ec570",
   storageBucket: "portfolio-ec570.appspot.com",
   messagingSenderId: "472510043627",
