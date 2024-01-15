@@ -13,6 +13,7 @@ import ProjectsPage from "./components/ProjectsPage/index.jsx";
 import Riddle from "./Pages/Riddle/index.jsx";
 import Career from "./Pages/Career/index.jsx";
 import "./index.css";
+import SendReview from "./Pages/sendReview/index.jsx";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
   {
     path: "/riddle",
     element: <Riddle />,
+  },
+  {
+    path: "/review",
+    element: <SendReview />,
   },
   {
     path: "/admin",

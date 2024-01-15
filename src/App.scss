@@ -216,3 +216,60 @@ ul li.active {
     filter: blur(1);
   }
 }
+
+.socials {
+  display: flex;
+  // flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  li {
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 10px 0;
+  }
+
+  li::before {
+    display: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #ff3870;
+    transition: 0.5s;
+    transform: scale(0.9);
+    z-index: -1;
+  }
+
+  li:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ff3870;
+  }
+
+  li:hover {
+    color: #ff3870;
+    box-shadow: 0 0 15px #ff3870;
+  }
+
+  svg {
+    height: 30px;
+    width: 30px;
+    transition: 0.5s linear;
+  }
+
+  li svg path {
+    fill: white;
+  }
+
+  li:hover svg path {
+    fill: #ff3870;
+  }
+
+  // svg:hover {
+  //   box-shadow: 0 0 5px #ff3870;
+  //   text-shadow: 0 0 5px #ff3870;
+  // }
+}
