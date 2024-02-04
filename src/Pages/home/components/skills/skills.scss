@@ -100,11 +100,11 @@
       }
 
       .visit-linkedin {
-        .toLinkedin {
+        .toGithub {
           color: #ff3870;
         }
 
-        .toLinkedin:hover {
+        .toGithub:hover {
           text-decoration: underline;
         }
       }
@@ -205,4 +205,40 @@
 .Main2 #projects,
 .Main2 footer {
   padding: 20px 0;
+}
+.headTextMobile {
+  display: none;
+}
+
+@media screen and (max-width: 920px) {
+  .skills-experience {
+    .container {
+      max-width: 100%;
+      .content {
+        .headText {
+          display: none;
+        }
+        .headTextMobile {
+          display: block;
+          font-size: 30px;
+        }
+      }
+
+      .icons {
+        padding: 0px 5px;
+        display: flex;
+        max-width: 100%;
+        gap: 10px;
+        .skilBox {
+          img {
+            height: "20px";
+            margin-bottom: "5px";
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
 }

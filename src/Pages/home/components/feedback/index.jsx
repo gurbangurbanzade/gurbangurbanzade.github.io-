@@ -1,5 +1,10 @@
+/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import "./style.scss";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Grid, Pagination, Autoplay } from "swiper/modules";
+import Carousel from "better-react-carousel";
+import SwiperCore from "swiper";
 import { useNavigate } from "react-router-dom";
 import {
   GithubLoginButton,
@@ -15,16 +20,17 @@ import axios from "axios";
 import FeedbackCard from "../../../../components/feedbackCard";
 import app from "../../../../firebase/config";
 function Feedback() {
+  SwiperCore.use([Autoplay]);
+
   const navigate = useNavigate();
 
   const [feedBacks, setFeedBacks] = useState([]);
   const [user, setUser] = useState({});
 
   const URL = import.meta.env.VITE_REVIEWS_URL;
-  console.log("URL", URL);
+
   useEffect(() => {
     axios(URL).then((res) => {
-      console.log("feedbacks");
       // while (updatedFeedbacks.length < 20) {
       //   updatedFeedbacks = [...updatedFeedbacks, ...updatedFeedbacks];
       // }
@@ -48,7 +54,6 @@ function Feedback() {
         const user = result.user;
         setUser(user);
         localStorage.setItem("user", JSON.stringify(user));
-        console.log("user", user);
         navigate("/review");
         // IdP data available using getAdditionalUserInfo(result)
         // ...
@@ -76,7 +81,6 @@ function Feedback() {
         // The signed-in user info.
         const user = result.user;
         localStorage.setItem("user", JSON.stringify(user));
-        console.log("user", user);
         navigate("/review");
         // IdP data available using getAdditionalUserInfo(result)
         // ...
@@ -95,19 +99,40 @@ function Feedback() {
 
   return (
     <div className="flexer">
-      <div className="wrapper feedBack slider">
-        <div className="slide-track">
-          <div className="gradient-overlay"></div>
-
-          {feedBacks.map((elem) => (
-            <FeedbackCard
-              user={elem}
+      {/* <Swiper
+        slidesPerView={1}
+        grid={{
+          rows: 1,
+        }}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        loop={true}
+        modules={[Grid, Pagination]}
+        className="mySwiper"
+        autoplay={{ delay: 500, disableOnInteraction: false }}
+        onSlideChange={(swiper) => handleSlideChange(swiper)}
+      >
+        {feedBacks &&
+          feedBacks.map((elem) => (
+            <SwiperSlide
+              style={{ transform: `translateX(-${transformValue}px)` }}
               key={elem.id}
-              className="cardFeed slide"
-            />
+            >
+              <FeedbackCard user={elem} className="cardFeed slide" />
+            </SwiperSlide>
           ))}
-        </div>
-      </div>
+      </Swiper> */}
+      <Carousel cols={3} rows={2} gap={10} loop={true} autoplay={3000}>
+        {feedBacks &&
+          feedBacks.map((elem) => (
+            <Carousel.Item key={elem.id}>
+              <FeedbackCard user={elem} className="cardFeed slide" />
+            </Carousel.Item>
+          ))}
+      </Carousel>
+
       <div className="mediaIconsBox">
         <GithubLoginButton
           className="mediaIconsBoxItem"
