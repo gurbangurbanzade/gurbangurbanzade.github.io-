@@ -2,6 +2,7 @@
 import { GiTwinShell } from "react-icons/gi";
 import { Link, Outlet } from "react-router-dom";
 import "./homePage.scss";
+import Intro from "./components/intro/index";
 import Footer from "./../../components/Footer";
 import Skills from "./components/skills";
 import "animate.css";
