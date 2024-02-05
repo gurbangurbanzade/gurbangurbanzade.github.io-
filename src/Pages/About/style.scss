@@ -1,7 +1,7 @@
 $animation-timing: 27s;
 $carousel-items: 9;
-$animation-delay-fraction: $animation-timing / $carousel-items;
-$animation-steps-fraction: 100 / $carousel-items;
+// $animation-delay-fraction: $animation-timing / $carousel-items;
+// $animation-steps-fraction: 100 / $carousel-items;
 $slide-change-timing: 3;
 
 body {
@@ -115,7 +115,6 @@ body::-webkit-scrollbar-track {
 
       input {
         width: 100%;
-
       }
 
       textarea,
@@ -150,7 +149,6 @@ body::-webkit-scrollbar-track {
       height: 100px !important;
       width: 100px !important;
     }
-
   }
 }
 
@@ -206,14 +204,14 @@ body {
   padding: 16px;
 }
 
-.contentFeed>h2 {
+.contentFeed > h2 {
   // font-size: clamp(1.3rem, 2.5vw,
   //     1.8rem);
   font-weight: 700;
   margin-bottom: clamp(0.35rem, 2vw, 0.55rem);
 }
 
-.contentFeed>p {
+.contentFeed > p {
   font-size: clamp(1rem, 1.75vw, 1.1rem);
   font-weight: 400;
   margin: 6px 0;
@@ -282,8 +280,6 @@ body {
   flex: 1 0 80px;
 }
 
-
-
 .sendFeed {
   margin-top: 10px;
   border: 2px solid white;
@@ -322,7 +318,6 @@ form .sendFeed {
 
   button {
     border: 2px solid #1d1e2c;
-
   }
 
   input,
