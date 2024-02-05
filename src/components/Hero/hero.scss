@@ -273,6 +273,10 @@ body {
 @media screen and (max-width: "992px") {
   .Main2 {
     .hero-section {
+      height: auto;
+      .stars {
+        height: auto;
+      }
       .content {
         display: flex;
         flex-direction: column;

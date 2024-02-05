@@ -57,19 +57,32 @@
     align-items: center;
   }
   .review-card {
-    width: 95%;
-    .img-area {
-      width: 60px;
-      height: 60px;
-    }
-    .info {
-      h4 {
-        font-size: 16px;
+    padding: 2%px;
+    min-width: 95%;
+    // margin-right: 100px;
+    height: 200px;
+
+    .header-content {
+      margin-bottom: 0px;
+      .img-area {
+        width: 60px;
+        height: 60px;
       }
-      p {
-        font-size: 13px;
+      .info {
+        .infoName {
+          display: flex;
+          gap: 6px;
+          h4 {
+            font-size: 16px;
+          }
+        }
+
+        p {
+          font-size: 13px;
+        }
       }
     }
+
     .single-review {
       p {
         font-size: 13px;

@@ -9,8 +9,10 @@ const FeedbackCard = ({ user }) => {
           <img alt={name} src={user.image} />
         </div>
         <div className="info">
-          <h4>{user.name}</h4>
-          <h4>{user.surname}</h4>
+          <div className="infoName">
+            <h4>{user.name}</h4>
+            <h4>{user.surname}</h4>
+          </div>
           <p>Frontend Developer</p>
         </div>
       </div>
