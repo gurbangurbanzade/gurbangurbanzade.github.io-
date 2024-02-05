@@ -88,7 +88,7 @@ function Projects() {
         <SwiperSlide>
           <div id="projects" style={{ width: "100%" }}>
             <div className="container">
-              <h1
+              <div
                 className={`${
                   animationPlayed
                     ? " animate__animated animate__slideInUp"
@@ -105,7 +105,7 @@ function Projects() {
                     <h1>o</h1>
                     <h1>l</h1>
                     <h1>i</h1>
-                    <h1>o </h1>
+                    <h1>o</h1>
                   </div>
                   <span> </span>
                   <h1> & </h1>
@@ -132,15 +132,12 @@ function Projects() {
                   <h1>t</h1>
                   <h1>s</h1>
                 </div>
-              </h1>
+              </div>
               <p>
                 I have built various different projects to fit different aspects
                 of the client's business. If you want to see more examples of my
                 work than the ones showcased in this site, please{" "}
-                <a>
-                  {" "}
-                  <Link to={"/contact"}>contact me!</Link>
-                </a>
+                <Link to={"/contact"}>contact me!</Link>
               </p>
 
               <a

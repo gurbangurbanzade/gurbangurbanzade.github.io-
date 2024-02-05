@@ -1,6 +1,5 @@
 // import { FaGithubAlt } from "react-icons/fa";
-import { GiTwinShell } from "react-icons/gi";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import "./homePage.scss";
 import Intro from "./components/intro/index";
 import Footer from "./../../components/Footer";
@@ -19,10 +18,8 @@ import {
   EffectCube,
   EffectFade,
 } from "swiper/modules";
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "react-bezier-curve-editor/index.css";
-import { BezierCurveEditor } from "react-bezier-curve-editor";
-import { Margin } from "@mui/icons-material";
 
 function HomePage() {
   const [swiper, setSwiper] = useState(null);
@@ -82,13 +79,13 @@ function HomePage() {
     }
   };
 
-  const goByID = () => {
-    const goByID = document.querySelector(".Main2 #projects");
-    console.log(goByID);
-    if (goByID) {
-      goByID.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  // const goByID = () => {
+  //   const goByID = document.querySelector(".Main2 #projects");
+  //   console.log(goByID);
+  //   if (goByID) {
+  //     goByID.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
 
   useEffect(() => {
     const timeout = setTimeout(() => {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import BackBtn from "../../components/backBtn/index";
 import axios from "axios";
 import "./blog.scss";
@@ -42,6 +42,7 @@ function Blog() {
                       backgroundRepeat: "no-repeat",
                     }}
                     className=" col-sm-12 col-md-12 col-lg-8  col-xl-8 html"
+                    key={idx}
                   >
                     <div className="card-content">
                       <p>{newsBlog.news}</p>
@@ -56,6 +57,7 @@ function Blog() {
                       backgroundRepeat: "no-repeat",
                     }}
                     className=" col-sm-12 col-md-12 col-lg-4  col-xl-4  css"
+                    key={idx}
                   >
                     <div className="card-content">
                       <h2>{newsBlog.news}</h2>

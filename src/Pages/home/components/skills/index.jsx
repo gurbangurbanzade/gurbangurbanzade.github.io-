@@ -20,7 +20,7 @@ const Skils = () => {
             <h2 className="problem">
               a problem is a change for you to do your best
             </h2>
-            <h1 className="headText">
+            <div className="headText">
               {headText.split("").map((letter, i) => {
                 return (
                   <h1
@@ -31,7 +31,7 @@ const Skils = () => {
                   </h1>
                 );
               })}
-            </h1>
+            </div>
             <h1 className="headTextMobile">Skills & Experience</h1>
             <h4>
               The main area of expertise is front end development (client side
