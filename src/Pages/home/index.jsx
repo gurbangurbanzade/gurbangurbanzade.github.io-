@@ -6,7 +6,6 @@ import Footer from "./../../components/Footer";
 import Skills from "./components/skills";
 import "animate.css";
 import Hero from "./../../components/Hero";
-import Intro from "./components/Intro";
 import Projects from "./../../components/Projects";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
