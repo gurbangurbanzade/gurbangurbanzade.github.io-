@@ -1,8 +1,6 @@
-/* eslint-disable no-unused-vars */
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./style.scss";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Grid, Pagination, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import Carousel from "better-react-carousel";
 import SwiperCore from "swiper";
 import { useNavigate } from "react-router-dom";
@@ -20,12 +18,9 @@ import axios from "axios";
 import FeedbackCard from "../../../../components/feedbackCard";
 import app from "../../../../firebase/config";
 function Feedback() {
-  SwiperCore.use([Autoplay]);
-
   const navigate = useNavigate();
 
   const [feedBacks, setFeedBacks] = useState([]);
-  const [user, setUser] = useState({});
 
   const URL = import.meta.env.VITE_REVIEWS_URL;
 
@@ -99,32 +94,15 @@ function Feedback() {
 
   return (
     <div className="flexer">
-      {/* <Swiper
-        slidesPerView={1}
-        grid={{
-          rows: 1,
-        }}
-        spaceBetween={30}
-        pagination={{
-          clickable: true,
-        }}
+      <Carousel
+        cols={3}
+        rows={2}
+        gap={10}
         loop={true}
-        modules={[Grid, Pagination]}
-        className="mySwiper"
-        autoplay={{ delay: 500, disableOnInteraction: false }}
-        onSlideChange={(swiper) => handleSlideChange(swiper)}
+        autoplay={3000}
+        scrollSnap={true}
+        scroll-snap
       >
-        {feedBacks &&
-          feedBacks.map((elem) => (
-            <SwiperSlide
-              style={{ transform: `translateX(-${transformValue}px)` }}
-              key={elem.id}
-            >
-              <FeedbackCard user={elem} className="cardFeed slide" />
-            </SwiperSlide>
-          ))}
-      </Swiper> */}
-      <Carousel cols={3} rows={2} gap={10} loop={true} autoplay={3000}>
         {feedBacks &&
           feedBacks.map((elem) => (
             <Carousel.Item key={elem.id}>
