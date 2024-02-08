@@ -94,7 +94,7 @@ function Feedback() {
 
   return (
     <div className="flexer">
-      <Carousel
+      {/* <Carousel
         cols={3}
         rows={2}
         gap={10}
@@ -109,7 +109,7 @@ function Feedback() {
               <FeedbackCard user={elem} className="cardFeed slide" />
             </Carousel.Item>
           ))}
-      </Carousel>
+      </Carousel> */}
 
       <div className="mediaIconsBox">
         <GithubLoginButton
