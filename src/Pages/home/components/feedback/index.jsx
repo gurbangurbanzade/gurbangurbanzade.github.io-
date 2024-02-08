@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import "./style.scss";
 import { Autoplay } from "swiper/modules";
-import Carousel from "better-react-carousel";
+// import Carousel from "better-react-carousel";
 import SwiperCore from "swiper";
 import { useNavigate } from "react-router-dom";
 import {
@@ -100,8 +100,8 @@ function Feedback() {
         gap={10}
         loop={true}
         autoplay={3000}
-        scrollSnap={true}
-        scroll-snap
+        // scrollSnap={true}
+        // scroll-snap
       >
         {feedBacks &&
           feedBacks.map((elem) => (
