@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import "./style.scss";
 import { Autoplay } from "swiper/modules";
-// import Carousel from "better-react-carousel";
+import Carousel from "better-react-carousel";
 import SwiperCore from "swiper";
 import { useNavigate } from "react-router-dom";
 import {
@@ -17,6 +17,7 @@ import {
 import axios from "axios";
 import FeedbackCard from "../../../../components/feedbackCard";
 import app from "../../../../firebase/config";
+import TestCarousel from "../../../../components/TestCarousel";
 function Feedback() {
   const navigate = useNavigate();
 
@@ -94,7 +95,7 @@ function Feedback() {
 
   return (
     <div className="flexer">
-      {/* <Carousel
+      <Carousel
         cols={3}
         rows={2}
         gap={10}
@@ -109,8 +110,8 @@ function Feedback() {
               <FeedbackCard user={elem} className="cardFeed slide" />
             </Carousel.Item>
           ))}
-      </Carousel> */}
-
+      </Carousel>
+      {/* <TestCarousel customers={feedBacks} /> */}
       <div className="mediaIconsBox">
         <GithubLoginButton
           className="mediaIconsBoxItem"

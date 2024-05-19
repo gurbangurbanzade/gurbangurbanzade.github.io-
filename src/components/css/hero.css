@@ -81,7 +81,8 @@ body {
   border-radius: 50%;
   filter: drop-shadow(0 0 6px currentColor);
   transform: translate3d(calc(100vw + 30em), 0, 0);
-  animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
+  animation: fall var(--fall-duration) var(--fall-delay) linear infinite,
+    tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
 }
 @media screen and (max-width: 750px) {
   .star {
@@ -388,7 +389,8 @@ body {
   --fall-duration: 9.734s;
   --fall-delay: 7.05s;
 }
-.star::before, .star::after {
+.star::before,
+.star::after {
   position: absolute;
   content: "";
   top: 0;
@@ -412,11 +414,13 @@ body {
   }
 }
 @keyframes tail-fade {
-  0%, 50% {
+  0%,
+  50% {
     width: var(--star-tail-length);
     opacity: 1;
   }
-  70%, 80% {
+  70%,
+  80% {
     width: 0;
     opacity: 0.4;
   }
@@ -548,4 +552,4 @@ body {
 .Main2 .hero-section {
   background: rgb(30, 24, 46);
   background: linear-gradient(90deg, rgb(30, 24, 46) 42%, rgb(23, 30, 55) 77%);
-}/*# sourceMappingURL=hero.css.map */
+} /*# sourceMappingURL=hero.css.map */
