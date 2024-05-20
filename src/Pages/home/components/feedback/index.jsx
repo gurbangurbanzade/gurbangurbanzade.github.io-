@@ -111,7 +111,7 @@ function Feedback() {
             </Carousel.Item>
           ))}
       </Carousel> */}
-      <TestCarousel customers={feedBacks} />
+      {/* <TestCarousel customers={feedBacks} /> */}
       <div className="mediaIconsBox">
         <GithubLoginButton
           className="mediaIconsBoxItem"
