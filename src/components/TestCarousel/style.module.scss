@@ -7,26 +7,24 @@
 
 #feedbackContainer {
   #feedback {
-    padding: 9.6rem 0rem;
+    // padding: 3.6rem 0rem;
 
     .header {
       @include flexBox(row, space-between, flex-start);
-      margin-bottom: 6.4rem;
+      // margin-bottom: 6.4rem;
       .leftSide {
         @include flexBox(column, flex-start, flex-start);
         > h2 {
-          font-size: 3.6rem;
+          font-size: 2.6rem;
           font-weight: 600;
           line-height: 4.4rem;
-          color: #101828;
-          margin-bottom: 2rem;
+          color: white;
+          margin-bottom: 1rem;
           letter-spacing: -2%;
         }
         > p {
           font-weight: 400;
-          font-size: 2rem;
-          color: #475467;
-          line-height: 3rem;
+          color: white;
         }
       }
       .btnBox {
@@ -65,7 +63,7 @@
 
         .card {
           border: 0.1rem solid #d0d5dd;
-          width: 36rem;
+          width: 30rem;
           padding: 2.4rem;
           border-radius: 1.6rem;
           > img {
@@ -78,24 +76,17 @@
             font-weight: 600;
             font-size: 1.8rem;
             line-height: 2.8rem;
-            color: #101828;
+            color: white;
             margin-bottom: 0.4rem;
           }
-          > p {
-            font-weight: 400;
-            font-size: 1.6rem;
-            line-height: 2.4rem;
-            color: #475467;
-            margin-bottom: 1.6rem;
-          }
+
           .starBox {
             margin-bottom: 0.4rem;
           }
-          > h6 {
-            font-weight: 600;
-            font-size: 2rem;
-            line-height: 3rem;
-            color: #000000;
+          .text {
+            // font-weight: 600;
+            // line-height: 3rem;
+            color: white;
           }
         }
       }
@@ -112,7 +103,7 @@
 @media (max-width: 576px) {
   #feedbackContainer {
     #feedback {
-      padding: 6.4rem 0rem;
+      // padding: 6.4rem 0rem;
       .header {
         @include flexBox(column, flex-start, flex-start);
         gap: 4.8rem;

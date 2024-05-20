@@ -221,7 +221,7 @@ const TestCarousel = ({ customers }) => {
                         ) : null
                       )}
                     </div> */}
-                      <h6>{customer.text}</h6>
+                      <p className={styles.text}>{customer.text}</p>
                     </div>
                   );
                 })}
