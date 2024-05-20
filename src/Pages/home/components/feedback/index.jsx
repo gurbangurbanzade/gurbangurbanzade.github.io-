@@ -1,7 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import "./style.scss";
 import { Autoplay } from "swiper/modules";
-import Carousel from "better-react-carousel";
 import SwiperCore from "swiper";
 import { useNavigate } from "react-router-dom";
 import {

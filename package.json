@@ -21,7 +21,6 @@
     "@mui/styled-engine-sc": "^6.0.0-alpha.6",
     "animate.css": "^4.1.1",
     "axios": "^1.6.5",
-    "better-react-carousel": "^1.1.2",
     "bezier": "^0.1.0",
     "firebase": "^10.7.1",
     "localforage": "^1.10.0",
